@@ -3,12 +3,305 @@
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Title</title>
+    <link rel="apple-touch-icon" sizes="57x57" href="/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192"  href="/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/manifest.json">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff">
+    <title>Kat VR</title>
     <link rel="stylesheet" href="./styles/main.css">
+    <script src="https://cdn.jsdelivr.net/npm/simple-parallax-js@5.2.0/dist/simpleParallax.min.js"></script>
   </head>
   <body>
-    <img src="./images/logo.svg" alt="Logo">
-    <h1>Hello Mate Academy</h1>
+    <div class="layout-block">
+      <header class="header">
+        <a href="/">
+          <img src="./images/katVR_logo.svg" alt="Kat VR">
+        </a>
+        <nav class="nav header__nav">
+          <ul class="nav__list">
+            <li class="nav__item">
+              <a href="#about" class="nav__link header__link">About</a>
+            </li>
+            <li class="nav__item">
+              <a href="#kat-tech" class="nav__link header__link">Tech</a>
+            </li>
+            <li class="nav__item">
+              <a href="#why-kat" class="nav__link header__link">Benefits</a>
+            </li>
+            <li class="nav__item">
+              <a href="#get-in-touch" class="nav__link header__link">Contact</a>
+            </li>
+            <li class="nav__item">
+              <a href="#" class="header__button button">Buy now</a>
+            </li>
+          </ul>
+        </nav>
+      </header>
+    </div>
+    <main>
+      <div class="layout-block">
+        <section class="header-cover">
+          <div class="header-cover__info">
+            <h1 class="header-cover__header">The new start of<br/><span class="quantum">VR Motion</span></h1>
+            <section class="header-cover__description-wrapper">
+              <p class="header-cover__description">Discover the most comprehensive VR Locomotion system, and unlock infinite motion in any games on any platforms!</p>
+              <p class="header-cover__price">1200$</p>
+              <button class="play-button">
+                <span class="play"></span>
+                <span class="text">Play Video</span>
+              </button>
+            </section>
+          </div>
+          <img src="./images/katVR_lg.png" alt="katVR sensors" class="header-cover__img" id="cover-img"/>
+          <div class="header-cover__navigation">
+            <nav class="nav">
+              <ul class="nav__list">
+                <li class="nav__item">
+                  <a href="#" class="nav__link">FAQ</a>
+                </li>
+                <li class="nav__item">
+                  <a href="#" class="nav__link">Help</a>
+                </li>
+              </ul>
+            </nav>
+            <a href="#more-than-gaming" class="header-cover__more-button anchor-link">More</a>
+            <span></span>
+          </div>
+        </section>
+      </div>
+      <div class="layout-block layout-block--dark" id="more-than-gaming" tabindex="0">
+        <section class="more-than-gaming content-block">
+          <h2 class="more-than-gaming__header">More than <span class="quantum">gaming</span></h2>
+          <p class="contrast text-center more-than-gaming__description">This also made for people who are interested in...</p>
+          <section class="advantages">
+            <article class="advantages__card">
+              <img class="advantages__img" src="./images/education.svg" alt="education" />
+              <h3 class="advantages__header">Education</h3>
+              <p class="advantages__description">Create educational simulations, trainings and much more with unlimited virtual space and minimum physical space</p>
+            </article>
+            <article class="advantages__card">
+              <img class="advantages__img" src="./images/skyline.svg" alt="skyline" />
+              <h3 class="advantages__header">Real estate</h3>
+              <p class="advantages__description">Design architectural projects in a deeply realistic environment allowing visitors to freely walk around, and feel their vibe</p>
+            </article>
+            <article class="advantages__card">
+              <img class="advantages__img" src="./images/fitness.svg" alt="fitness" />
+              <h3 class="advantages__header">Fitness</h3>
+              <p class="advantages__description">Combine business with pleasure, and discover countless ways to stay fit while playing your favorite VR Games!</p>
+            </article>
+            <article class="advantages__card">
+              <img class="advantages__img" src="./images/network.svg" alt="network" />
+              <h3 class="advantages__header">Social interactions</h3>
+              <p class="advantages__description">Hang out with your friends in the virtual world when you can’t meet space requirements</p>
+            </article>
+          </section>
+        </section>
+      </div>
+      <div class="layout-block layout-block--gradient" id="about">
+        <section class="about content-block">
+          <article class="about-product">
+            <img src="./images/about-product.png" alt="about katVR" class="about-product__img" />
+            <div class="about-product__inner">
+              <h2 class="text-left about-product__header">About <span class="quantum">product</span></h2>
+              <p class="about-product__description">KAT loco is a foot-based VR locomotion system that gives complete physical control over lower-body actions, allowing you to freely walk, run, and carry out just any other movement in virtual reality.</p>
+              <button class="play-button">
+                <span class="play"></span>
+                <span class="text">Play Video</span>
+              </button>
+            </div>
+          </article>
+          <article class="about-us">
+            <div class="about-us__inner">
+              <p class="contrast small-text">Hello,</p>
+              <h2 class="text-left about-us__header" tabindex="0">Nice to meet <span class="quantum">you!</span></h2>
+              <p class="about-us__description">KAT VR is an independent company dedicated to the research, development, and sales of VR Locomotion products and solutions. Founded in 2013, we have quickly grown to become one of the world’s leading professional suppliers of VR games’ & simulations’ equipment</p>
+            </div>
+            <div class="about-us__decor">
+              <span class="about-us__decor-el">About us</span>
+              <span class="about-us__decor-el">About us</span>
+              <span class="about-us__decor-el">About us</span>
+              <span class="about-us__decor-el">About us</span>
+              <span class="about-us__decor-el">About us</span>
+              <span class="about-us__decor-el">About us</span>
+              <span class="about-us__decor-el">About us</span>
+            </div>
+          </article>
+        </section>
+      </div>
+      <div class="layout-block layout-block--dark" id="kat-tech">
+        <section class="content-block kat-tech">
+          <h2 class="kat-tech__header">Tech <span class="quantum">specs</span></h2>
+          <div class="kat-tech__container">
+            <img src="./images/katTech.png" alt="katVR tech specs" class="kat-tech__img">
+            <svg id="line-sensor" xmlns="http://www.w3.org/2000/svg" width="404" height="72" viewBox="0 0 404 72" fill="none" class="kat-tech__line">
+              <path d="M4.5 4H403V72" stroke="#05C2DF" stroke-dasharray="468" stroke-dashoffset="468">
+                <animate id="a1" attributeName="stroke-dashoffset" begin="indefinite" values="468; 0" dur="1s" repeatCount="1" fill="freeze" calcMode="linear"></animate>
+              </path>
+              <circle cx="4" cy="4" r="4" fill="#05C2DF"></circle>
+            </svg>
+            <article class="kat-tech__spec kat-tech__spec--sensor">
+              <h3 class="kat-tech__spec-header text-left">Sensor</h3>
+              <ul class="kat-tech__spec-list">
+                <li class="kat-tech__spec-list-item">Weight: 35g/1.23oz each</li>
+                <li class="kat-tech__spec-list-item">Dimension: 50mm/1.97in</li>
+                <li class="kat-tech__spec-list-item">24mm/0.94in</li>
+                <li class="kat-tech__spec-list-item">Light: LED lights</li>
+              </ul>
+            </article>
+            <svg id="line-connections" xmlns="http://www.w3.org/2000/svg" width="167" height="205" viewBox="0 0 167 205" fill="none" class="kat-tech__line">
+              <path d="M3 130.5H41V25.5H130" stroke="#05C2DF" stroke-dasharray="234" stroke-dashoffset="234">
+                <animate id="a2" attributeName="stroke-dashoffset" begin="indefinite" values="234; 0" dur="1s" repeatCount="1" fill="freeze" calcMode="linear"></animate>
+              </path>
+              <circle cx="4" cy="130" r="1.5" stroke="#05C2DF" fill="transparent" stroke-width="5"></circle>
+              <circle cx="130" cy="25" r="1.5" stroke="#05C2DF" fill="transparent" stroke-width="5"></circle>
+              <path d="M165.083 3.10299C139.582 28.1063 123.03 62.4077 121.055 100.918C119.052 139.977 132.409 176.262 155.827 203.892" stroke="#05C2DF"></path>
+            </svg>
+            <article class="kat-tech__spec kat-tech__spec--connection">
+              <h3 class="kat-tech__spec-header text-left">Connection</h3>
+              <ul class="kat-tech__spec-list">
+                <li class="kat-tech__spec-list-item">Wireless: Bluetooth 4.2</li>
+                <li class="kat-tech__spec-list-item">Signal range: 5m</li>
+                <li class="kat-tech__spec-list-item">Receiver: USB 2.0 and above</li>
+              </ul>
+            </article>
+            <svg id="line-batteries" xmlns="http://www.w3.org/2000/svg" width="192" height="245" viewBox="0 0 192 245" fill="none" class="kat-tech__line">
+              <path id="test" d="M188 1.5V241H4" stroke="#05C2DF" stroke-dasharray="426" stroke-dashoffset="426">
+                <animate id="a3" attributeName="stroke-dashoffset" begin="indefinite" values="426; 0" dur="1s" repeatCount="1" fill="freeze" calcMode="linear"></animate>
+              </path>
+              <circle cx="188" cy="4" r="4" fill="#05C2DF"/>
+              <circle cx="4" cy="241" r="4" fill="#05C2DF"/>
+            </svg>
+            <article class="kat-tech__spec kat-tech__spec--batteries">
+              <h3 class="kat-tech__spec-header text-left">Batteries</h3>
+              <ul class="kat-tech__spec-list">
+                <li class="kat-tech__spec-list-item">Type: Lthium-lon polymer batteries</li>
+                <li class="kat-tech__spec-list-item">Capacity: 370mAh</li>
+                <li class="kat-tech__spec-list-item">Battery life: 10h of continuous use 150 hours on stand by</li>
+                <li class="kat-tech__spec-list-item">Charging: Fast charging - 1 hour</li>
+                <li class="kat-tech__spec-list-item">Charging voltage and current: 5V = 0.5A</li>
+              </ul>
+            </article>
+          </div>
+        </section>
+      </div >
+      <div class="layout-block layout-block--gradient" id="why-kat" tabindex="0">
+        <section class="why-kat content-block">
+          <h2 class="why-kat__header">Why <span class="quantum">kat loco?</span></h2>
+          <section class="advantages why-kat__advantages">
+            <article class="advantages__card">
+              <img class="advantages__img" src="./images/universally.svg" alt="universally" />
+              <h3 class="advantages__header">Universally compatible</h3>
+              <p class="advantages__description">KAT Loco offers universal compatibility across all major VR headsets and platforms allowing you to play any VR game with support for Free Locomotion</p>
+            </article>
+            <article class="advantages__card">
+              <img class="advantages__img" src="./images/control-panel.svg" alt="control panel" />
+              <h3 class="advantages__header">VR/PC control panel</h3>
+              <p class="advantages__description">Our Multifunctional Software allows for quick access to KAT Loco’s control panel both from a computer desktop, and directly from your VR headset.</p>
+            </article>
+            <article class="advantages__card">
+              <img class="advantages__img" src="./images/wireless.svg" alt="wireless" />
+              <h3 class="advantages__header">Wireless sensors</h3>
+              <p class="advantages__description">What makes it even more advanced, KAT Loco is entirely wireless, and comes with a complete system of algorithms, super durable batteries and more!</p>
+            </article>
+          </section>
+          <a href="#" class="button why-kat__button">Buy now</a>
+        </section>
+      </div>
+      <div class="layout-block layout-block--dark" id="get-in-touch">
+        <section class="content-block get-in-touch">
+          <article class="get-in-touch__content">
+            <p class="contrast small-text">Have any questions?</p>
+            <h2 class="text-left get-in-touch__header">get in <span class="quantum">touch</span></h2>
+            <p class="get-in-touch__description">Our manager will reply you within 15 minutes</p>
+            <address class="contacts">
+              <a href="tel:+86-0571-86105373" class="contacts__contact-link">+86-0571-86105373</a>
+              <a href="mailto:global@katvr.com" class="contacts__contact-link">global@katvr.com</a>
+              <a href="mailto:overseas@katvr.com" class="contacts__contact-link">overseas@katvr.com</a>
+            </address>
+          </article>
+          <form action="#" method="post" class="get-in-touch__form form">
+            <div class="form__input-outer">
+              <input type="text" name="name" class="form__input" id="name" autocomplete="off" required placeholder="Vlad Polets">
+              <label for="name" class="form__label">Name*</label>
+            </div>
+            <div class="form__input-outer">
+              <input type="email" name="email" class="form__input" id="email" autocomplete="off" required placeholder="example@gmail.com">
+              <label for="email" class="form__label">Email*</label>
+            </div>
+            <div class="form__input-outer">
+              <input type="number" name="phone" class="form__input" id="phone" autocomplete="off" required placeholder="+123 456 8900">
+              <label for="phone" class="form__label">Phone*</label>
+            </div>
+            <div class="form__input-outer form__textarea-outer">
+              <textarea name="message" class="form__input form__textarea" id="message" placeholder="Enter your message here"></textarea>
+              <label for="message" class="form__label">Message</label>
+            </div>
+            <input type="submit" class="button form__submit" value="Contact us">
+          </form>
+        </section>
+      </div>
+
+    </main>
+    <div class="layout-block layout-block--dark">
+      <footer class="footer">
+        <a href="/" class="footer__logo">
+          <img src="./images/katVR_logo.svg" alt="Kat VR">
+        </a>
+        <nav class="nav footer__nav">
+          <ul class="nav__list">
+            <li class="nav__item">
+              <a href="#about" class="nav__link">About</a>
+            </li>
+            <li class="nav__item">
+              <a href="#kat-tech" class="nav__link">Tech</a>
+            </li>
+            <li class="nav__item">
+              <a href="#" class="nav__link">Benefits</a>
+            </li>
+            <li class="nav__item">
+              <a href="#get-in-touch" class="nav__link">Contact</a>
+            </li>
+          </ul>
+        </nav>
+        <nav class="nav footer__nav footer__nav--social">
+          <ul class="nav__list">
+            <li class="nav__item">
+              <a href="#" class="nav__link nav__link--social">
+                <img src="./images/youtube.svg" alt="youtube">
+              </a>
+            </li>
+            <li class="nav__item">
+              <a href="#why-kat" class="nav__link nav__link--social">
+                <img src="./images/twitter.svg" alt="twitter">
+              </a>
+            </li>
+            <li class="nav__item">
+              <a href="#" class="nav__link nav__link--social">
+                <img src="./images/facebook.svg" alt="facebook">
+              </a>
+            </li>
+            <li class="nav__item">
+              <a href="#" class="nav__link nav__link--social">
+                <img src="./images/robot.svg" alt="robot">
+              </a>
+            </li>
+          </ul>
+        </nav>
+      </footer>
+    </div>
     <script type="text/javascript" src="scripts/main.js"></script>
   </body>
 </html>

@@ -19,11 +19,14 @@ const imagesBlob = 'src/images/**';
 const fontsBlob = 'src/fonts/**';
 const stylesBlob = 'src/styles/**';
 const jsBlob = 'src/scripts/**';
+const faviconBlob = 'src/favicon/**';
 
 const { series, parallel } = gulp;
 
 gulp.task('cleanDist', function() {
-  return gulp.src(distDirectory, { read: false, allowEmpty: true })
+  return gulp.src(distDirectory, {
+    read: false, allowEmpty: true,
+  })
     .pipe(clean());
 });
 
@@ -34,6 +37,8 @@ gulp.task('processHtml', function() {
     }, function(filepath, issues) {
       issues.forEach(function(issue) {
         const { line, column, code, msg } = issue;
+
+        // eslint-disable-next-line no-console
         console.log(
           ` ❌   ${colors.red('htmllint error')}
           📁  file: ${filepath}
@@ -48,6 +53,11 @@ gulp.task('processImages', function() {
     .pipe(gulp.dest(`${distDirectory}/images/`));
 });
 
+gulp.task('processFavicon', function() {
+  return gulp.src(faviconBlob)
+    .pipe(gulp.dest(distDirectory));
+});
+
 gulp.task('processFonts', function() {
   return gulp.src(fontsBlob)
     .pipe(gulp.dest(`${distDirectory}/fonts/`));
@@ -59,7 +69,9 @@ gulp.task('lintCss', function() {
     .pipe(gulpStylelint({
       failAfterError: false,
       reporters: [
-        { formatter: 'string', console: true },
+        {
+          formatter: 'string', console: true,
+        },
       ],
       debug: true,
     }));
@@ -91,6 +103,7 @@ gulp.task('build', series(
     'processStyles',
     'processHtml',
     'processImages',
+    'processFavicon',
     'processFonts',
     'processJs',
   )
@@ -108,6 +121,9 @@ gulp.task('serve', function() {
     .on('change', browserSync.reload);
 
   gulp.watch(imagesBlob, series('processImages'))
+    .on('change', browserSync.reload);
+
+  gulp.watch(faviconBlob, series('processFavicon'))
     .on('change', browserSync.reload);
 
   gulp.watch(fontsBlob, series('processFonts'))

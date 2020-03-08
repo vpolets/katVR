@@ -1,0 +1,15 @@
+@import "utils/vars";
+@import "utils/extends";
+
+.header {
+  padding: 64px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header__button {
+  box-sizing: border-box;
+  width: 200px;
+  text-align: center;
+}

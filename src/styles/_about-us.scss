@@ -1,0 +1,41 @@
+.about-us {
+  display: flex;
+  align-items: center;
+  position: relative;
+
+  &__inner {
+    margin-right: 100px;
+    width: 430px;
+  }
+}
+
+.about-us__decor {
+  position: absolute;
+  left: 650px;
+  top: 50%;
+  display: flex;
+  flex-direction: column-reverse;
+  transform: rotate(-90deg) translateX(50%);
+  pointer-events: none;
+  width: 400px;
+  height: 400px;
+}
+
+.about-us__decor-el {
+  text-transform: uppercase;
+  font-weight: 900;
+  font-size: 64px;
+  -webkit-text-stroke: 1px $contrast;
+  width: 335px;
+  height: 80px;
+
+  &:nth-child(2n+1) {
+    transform: rotate(180deg);
+  }
+}
+
+@for $i from 1 through 5 {
+  .about-us__decor-el:nth-child(n + #{$i}) {
+    opacity: calc(0.08 * #{$i});
+  }
+}

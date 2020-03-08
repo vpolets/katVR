@@ -1,0 +1,25 @@
+.about-product {
+  max-width: 880px;
+  margin: 0 0 100px auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-right: 48px;
+
+  &__img {
+    width: calc(100% - 430px);
+    height: 100%;
+  }
+
+  &__inner {
+    margin-left: 100px;
+  }
+
+  &__header {
+    margin: 0 0 32px;
+  }
+
+  &__description {
+    margin: 0 0 48px;
+  }
+}

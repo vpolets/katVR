@@ -1,0 +1,11 @@
+.footer {
+  height: 100px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.footer__logo,
+.footer__nav--social {
+  width: 250px;
+}

@@ -1,7 +1,192 @@
 @import "utils";
 @import "fonts";
 @import "typography";
+@import "header";
+@import "nav";
+@import "header-cover";
+@import "more-than-gaming";
+@import "advantages";
+@import "about-product";
+@import "about-us";
+@import "why-kat";
+@import "footer";
+@import "get-in-touch";
+@import "contacts";
+@import "form";
+@import "kat-tech";
+
+html {
+  scroll-behavior: smooth;
+}
 
 body {
-  background: $c-gray;
+  font-family: Mark, sans-serif;
+  min-height: 100vh;
+  background: linear-gradient(149.28deg, #191536 0.67%, black 100%);
+}
+
+.button {
+  font-family: Mark, sans-serif;
+  font-weight: 700;
+  font-size: 16px;
+  border: 3px solid $contrast;
+  padding: 12px 32px;
+  cursor: pointer;
+  background-color: $contrast;
+  box-sizing: border-box;
+  color: $white;
+  border-radius: 4px;
+  transition-property: background-color, color, border-color;
+  transition-duration: $transition-duration;
+  transition-timing-function: $transition-ease;
+  display: inline-block;
+
+  &:hover {
+    background-color: $white;
+    border-color: $white;
+    color: $contrast;
+  }
+
+  &:focus {
+    outline: none;
+    border: 3px solid $white;
+  }
+}
+
+.contrast {
+  color: $contrast;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.text-right {
+  text-align: right;
+}
+
+.text-left {
+  text-align: left;
+}
+
+.small-text {
+  font-weight: 14px;
+}
+
+.layout-block {
+  padding: 0 110px;
+  position: relative;
+  z-index: 0;
+  outline: none;
+
+  &--gradient {
+    background: linear-gradient(149.28deg, #191536 0.67%, black 100%);
+  }
+
+  &--dark {
+    background-color: $bg-black;
+  }
+}
+
+.content-block {
+  padding: 100px 0;
+}
+
+.play-button {
+  display: flex;
+  align-items: center;
+  width: 200px;
+  height: 48px;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  padding-left: 90px;
+  position: relative;
+
+  .text {
+    color: $white;
+    display: inline-block;
+    font-size: 18px;
+    padding: 8px;
+    position: relative;
+    font-weight: 700;
+
+    &::before {
+      content: "";
+      width: 100%;
+      height: 2px;
+      background-color: $contrast;
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      opacity: 0;
+      transform: translateX(50%);
+      transition-property: transform, opacity;
+      transition-duration: $transition-duration;
+      transition-timing-function: $transition-ease;
+    }
+  }
+
+  .play {
+    position: absolute;
+    width: 65px;
+    height: 65px;
+    border: $contrast solid 2px;
+    border-radius: 50%;
+    left: 30px;
+    top: 50%;
+    transform: translate(-50%, -50%);
+
+    &::after {
+      content: "";
+      border: 15px solid transparent;
+      border-left: solid $contrast 25px;
+      display: inline-block;
+      top: 50%;
+      left: 50%;
+      position: absolute;
+      transform: translate(-25%, -50%);
+      transition-property: border-left-color;
+      transition-duration: $transition-duration;
+      transition-timing-function: $transition-ease;
+    }
+
+    &::before {
+      content: "";
+      border: 4px solid rgba($contrast, 0.7);
+      border-left-color: transparent;
+      border-radius: 50%;
+      display: inline-block;
+      width: 80px;
+      height: 80px;
+      top: 50%;
+      left: 50%;
+      position: absolute;
+      transform: translate(-50%, -50%);
+      transition-property: transform, border-color;
+      transition-duration: $transition-duration-long, $transition-duration;
+      transition-timing-function: $transition-ease;
+    }
+  }
+
+  &:hover,
+  &:focus {
+    outline: none;
+    .text {
+      &::before {
+        transform: translateX(0);
+        opacity: 1;
+      }
+    }
+    .play {
+      &::before {
+        transform: translate(-50%, -50%) rotate(180deg);
+        border-color: rgba($white, 0.8);
+        border-left-color: transparent;
+      }
+      &::after {
+        border-left-color: $white;
+      }
+    }
+  }
 }

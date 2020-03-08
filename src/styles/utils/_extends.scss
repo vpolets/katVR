@@ -1,4 +1,39 @@
+@import "vars";
+
+%headers {
+  font-family: Mark, sans-serif;
+  font-weight: 900;
+  color: $white;
+  text-transform: uppercase;
+  text-align: center;
+  margin-top: 0;
+  outline: none;
+}
+
 %h1 {
-  font-family: "Roboto", sans-serif;
-  font-weight: 400;
+  @extend %headers;
+  font-size: 46px;
+  line-height: 130%;
+}
+
+%h2 {
+  @extend %headers;
+  font-size: 36px;
+}
+
+%h3 {
+  @extend %headers;
+  font-size: 16px;
+}
+
+%a {
+  font-family: Mark, sans-serif;
+  font-weight: 700;
+  font-size: 16px;
+  color: $white;
+  text-decoration: none;
+
+  &:visited {
+    color: $white;
+  }
 }

@@ -1,0 +1,28 @@
+.advantages {
+  max-width: 1060px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+}
+
+.advantages__card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  &:not(:last-child) {
+    margin-right: 24px;
+  }
+}
+
+.advantages__img {
+  margin-bottom: 32px;
+}
+
+.advantages__description {
+  text-align: center;
+  margin: 0;
+}
+
+.advantages__header {
+  margin-bottom: 16px;
+}

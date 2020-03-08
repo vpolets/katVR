@@ -1,0 +1,81 @@
+.form {
+  display: flex;
+  flex-direction: column;
+}
+
+.form__submit {
+  width: 200px;
+  text-align: center;
+}
+
+.form__input-outer {
+  height: 60px;
+  margin-bottom: 24px;
+  width: 100%;
+  display: flex;
+  align-items: flex-end;
+  position: relative;
+}
+
+.form__textarea-outer {
+  height: 148px;
+  margin-bottom: 100px;
+}
+
+.form__label {
+  position: absolute;
+  top: 24px;
+  left: 6px;
+  color: $text;
+  cursor: text;
+  line-height: 150%;
+  font-size: 14px;
+  transition-property: transform, color;
+  transition-duration: $transition-duration;
+  transition-timing-function: $transition-ease;
+}
+
+.form__input {
+  height: 40px;
+  width: 100%;
+  padding: 6px;
+  line-height: 150%;
+  background-color: transparent;
+  border: none;
+  border-bottom: 1px solid $dark-grey;
+  box-sizing: border-box;
+  font-size: 16px;
+  color: $white;
+  caret-color: $contrast;
+  cursor: text;
+  transition-property: border-bottom-color;
+  transition-duration: $transition-duration;
+  transition-timing-function: $transition-ease;
+
+  &:focus {
+    outline: none;
+    border-bottom-color: $contrast;
+  }
+
+  &:placeholder-shown::placeholder {
+    opacity: 0;
+    transition-property: opacity;
+    transition-duration: $transition-duration;
+    transition-timing-function: $transition-ease;
+  }
+
+  &:focus:placeholder-shown::placeholder {
+    opacity: 1;
+  }
+
+  &:not(:placeholder-shown) + .form__label,
+  &:focus + .form__label {
+    transform: translateY(-30px);
+    color: $contrast;
+  }
+}
+
+.form__textarea {
+  height: 120px;
+  resize: none;
+}

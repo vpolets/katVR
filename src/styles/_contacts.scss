@@ -1,0 +1,11 @@
+.contacts {
+  display: flex;
+  flex-direction: column;
+  font-style: normal;
+}
+
+.contacts__contact-link {
+  color: $text;
+  font-weight: 400;
+  margin-bottom: 10px;
+}
