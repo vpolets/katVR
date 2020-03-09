@@ -1,0 +1,25 @@
+.fixed-area {
+  position: fixed;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  height: 60px;
+  padding: 10px 20px;
+  z-index: 2;
+  background: linear-gradient(transparent 0.67%, black 100%);
+  @include for-tablet-landscape-up {
+    display: none;
+  }
+}
+
+.fixed-area__buy-now {
+  text-align: center;
+  width: 40%;
+
+  @include for-phone-only {
+    width: 100%;
+  }
+}

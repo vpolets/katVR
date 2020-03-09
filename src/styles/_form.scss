@@ -4,22 +4,33 @@
 }
 
 .form__submit {
-  width: 200px;
-  text-align: center;
+  width: 100%;
+
+  @include for-tablet-portrait-up {
+    width: 200px;
+  }
 }
 
 .form__input-outer {
   height: 60px;
-  margin-bottom: 24px;
+  margin-bottom: 12px;
   width: 100%;
   display: flex;
   align-items: flex-end;
   position: relative;
+
+  @include for-tablet-landscape-up {
+    margin-bottom: 24px;
+  }
 }
 
 .form__textarea-outer {
   height: 148px;
-  margin-bottom: 100px;
+  margin-bottom: 40px;
+
+  @include for-tablet-landscape-up {
+    margin-bottom: 100px;
+  }
 }
 
 .form__label {
@@ -70,8 +81,12 @@
 
   &:not(:placeholder-shown) + .form__label,
   &:focus + .form__label {
-    transform: translateY(-30px);
+    transform: translateY(-20px);
     color: $contrast;
+
+    @include for-tablet-landscape-up {
+      transform: translateY(-30px);
+    }
   }
 }
 

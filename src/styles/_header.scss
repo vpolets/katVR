@@ -2,14 +2,69 @@
 @import "utils/extends";
 
 .header {
-  padding: 64px 0;
+  padding: 18px 0;
   display: flex;
   justify-content: space-between;
   align-items: center;
+
+  @include for-tablet-landscape-up {
+    padding: 64px 0;
+  }
 }
 
 .header__button {
   box-sizing: border-box;
   width: 200px;
   text-align: center;
+}
+
+.header__nav {
+  display: none;
+  @include for-tablet-landscape-up {
+    display: block;
+  }
+}
+
+.header__nav--burger {
+  display: block;
+  transform: translateY(-100%);
+  position: absolute;
+  width: 100%;
+  padding: 32px;
+  background-color: $purple;
+  top: 0;
+  opacity: 0;
+  z-index: 2;
+
+  .nav__list {
+    flex-direction: column;
+  }
+
+  transition-property: transform, opacity;
+  transition-duration: $transition-duration;
+  transition-timing-function: $transition-ease;
+
+  @include for-tablet-landscape-up {
+    display: none;
+  }
+}
+
+.header__burger-button {
+  position: relative;
+  z-index: 3;
+  &.is-active {
+    ~ .header__nav--burger {
+      display: block;
+      transform: translateY(0);
+      opacity: 1;
+
+      @include for-tablet-landscape-up {
+        display: none;
+      }
+    }
+  }
+
+  @include for-tablet-landscape-up {
+    display: none;
+  }
 }

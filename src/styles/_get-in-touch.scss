@@ -1,7 +1,12 @@
 .get-in-touch {
   display: flex;
+  flex-direction: column;
   width: 100%;
-  justify-content: space-between;
+
+  @include for-tablet-portrait-up {
+    flex-direction: row;
+    justify-content: space-between;
+  }
 }
 
 .get-in-touch__header {
@@ -10,12 +15,39 @@
 
 .get-in-touch__description {
   margin: 0 0 50px;
+  display: none;
+
+  &--mobile {
+    margin: 24px 0 50px;
+  }
+
+  @include for-tablet-portrait-up {
+    &--mobile {
+      display: none;
+    }
+  }
 }
 
 .get-in-touch__content {
-  width: 340px;
+  width: 100%;
+
+  @include for-tablet-portrait-up {
+    width: 46%;
+  }
 }
 
 .get-in-touch__form {
-  width: 50%;
+  width: 100%;
+
+  @include for-tablet-portrait-up {
+    width: 50%;
+  }
+}
+
+.get-in-touch__contacts {
+  display: none;
+
+  @include for-tablet-portrait-up {
+    display: inline-flex;
+  }
 }

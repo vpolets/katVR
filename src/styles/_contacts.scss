@@ -1,6 +1,6 @@
 .contacts {
-  display: flex;
   flex-direction: column;
+  justify-content: flex-start;
   font-style: normal;
 }
 
@@ -8,4 +8,13 @@
   color: $text;
   font-weight: 400;
   margin-bottom: 10px;
+  transition-property: color;
+  transition-duration: $transition-duration;
+  transition-timing-function: $transition-ease;
+
+  &:hover,
+  &:focus {
+    outline: none;
+    color: $contrast;
+  }
 }

@@ -4,8 +4,14 @@
   position: relative;
 
   &__inner {
-    margin-right: 100px;
-    width: 430px;
+    @include for-tablet-portrait-up {
+      margin-right: 50px;
+      width: 430px;
+    }
+
+    @include for-tablet-landscape-up {
+      margin-right: 100px;
+    }
   }
 }
 
@@ -13,12 +19,16 @@
   position: absolute;
   left: 650px;
   top: 50%;
-  display: flex;
+  display: none;
   flex-direction: column-reverse;
   transform: rotate(-90deg) translateX(50%);
   pointer-events: none;
   width: 400px;
   height: 400px;
+
+  @include for-tablet-portrait-up {
+    display: flex;
+  }
 }
 
 .about-us__decor-el {

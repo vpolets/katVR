@@ -1,6 +1,9 @@
 .kat-tech__img {
   display: block;
-  height: 300px;
+  max-height: 300px;
+  max-width: 300px;
+  width: 100%;
+  height: auto;
   margin: 0 auto;
 }
 
@@ -14,37 +17,91 @@
 }
 
 .kat-tech__container {
+  outline: none;
   padding-top: 60px;
   position: relative;
 }
 
 .kat-tech__spec {
   opacity: 0;
+  pointer-events: none;
   transform: translateY(-50px);
   transition-property: opacity, transform;
   transition-duration: $transition-duration-long, $transition-duration;
   transition-timing-function: $transition-ease;
   position: absolute;
 
-  &.is-active {
-    opacity: 1;
-    transform: translateY(0);
+  background-color: $purple;
+  border-radius: 8px;
+  padding: 16px;
+  font-size: 14px;
+
+  .kat-tech__spec-header {
+    font-size: 16px;
+    margin-bottom: 8px;
   }
 
   &--connection {
-    width: 240px;
-    bottom: 30px;
-    right: calc(50% + 180px);
+    width: 200px;
+    top: 43%;
+    left: 5%;
   }
   &--batteries {
-    width: 340px;
-    top: 0;
-    left: calc(50% + 220px);
+    width: 240px;
+    top: -13%;
+    right: 0;
   }
   &--sensor {
-    top: 0;
-    right: calc(50% + 250px);
-    width: 250px;
+    top: 26%;
+    left: 9%;
+    width: 200px;
+  }
+
+  @include for-tablet-portrait-up {
+    &--connection {
+      top: 84%;
+      left: 41%;
+    }
+    &--batteries {
+      top: 24%;
+      right: 44%;
+    }
+    &--sensor {
+      top: -18%;
+      left: 46%;
+    }
+  }
+
+  @include for-desktop-up {
+    background-color: transparent;
+    border-radius: 0;
+    padding: 0;
+    font-size: inherit;
+    display: block;
+
+    &.is-active {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    &--connection {
+      width: 240px;
+      bottom: 30px;
+      right: calc(50% + 180px);
+      left: auto;
+    }
+    &--batteries {
+      width: 340px;
+      top: 0;
+      left: calc(50% + 220px);
+      right: auto;
+    }
+    &--sensor {
+      top: 0;
+      right: calc(50% + 250px);
+      left: auto;
+      width: 250px;
+    }
   }
 }
 
@@ -53,14 +110,18 @@
   transition: opacity;
   transition-timing-function: $transition-ease;
   transition-duration: $transition-duration;
+  display: none;
 
   &.is-active {
     opacity: 1;
   }
+
+  @include for-desktop-up {
+    display: block;
+  }
 }
 
 #line-connections {
-  display: block;
   position: absolute;
   left: calc(50% - 120px);
   top: calc(40% + 60px);
@@ -68,15 +129,106 @@
 }
 
 #line-sensor {
-  display: block;
   position: absolute;
   top: 8px;
   right: 50%;
 }
 
 #line-batteries {
-  display: block;
   position: absolute;
   left: 50%;
   bottom: 30%;
+}
+
+.kat-tech__button {
+  display: block;
+  width: 62px;
+  height: 62px;
+  border-radius: 50%;
+  border: 2px solid rgba(255, 255, 255, 0.14);
+  cursor: pointer;
+  background-color: $contrast;
+  box-sizing: border-box;
+  position: absolute;
+  transition-property: background-color;
+  transition-duration: $transition-duration;
+  transition-timing-function: $transition-ease;
+
+  &--batteries {
+    top: 50%;
+    left: 57%;
+
+    &.is-active {
+      ~ .kat-tech__spec--batteries {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+  }
+
+  &--connection {
+    top: 84%;
+    right: 60%;
+
+    &.is-active {
+      ~ .kat-tech__spec--connection {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+  }
+
+  &--sensor {
+    top: 5%;
+    right: 55%;
+
+    &.is-active {
+      ~ .kat-tech__spec--sensor {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+  }
+
+  &.is-active {
+    background-color: darken($contrast, 20%);
+
+    &::after {
+      transform: translate(-50%, -50%) rotate(90deg);
+      transform-origin: center center;
+    }
+  }
+
+  &::after,
+  &::before {
+    content: "";
+    position: absolute;
+    background: $white;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition-property: background-color, transform;
+    transition-duration: $transition-duration;
+    transition-timing-function: $transition-ease;
+  }
+
+  &::after {
+    width: 2px;
+    height: 30px;
+  }
+
+  &::before {
+    width: 30px;
+    height: 2px;
+  }
+
+  &:hover,
+  &:focus {
+    outline: none;
+    background-color: darken($contrast, 20%);
+  }
+
+  @include for-desktop-up {
+    display: none;
+  }
 }
