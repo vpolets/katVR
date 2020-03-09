@@ -63,6 +63,12 @@
   transition-duration: $transition-duration;
   transition-timing-function: $transition-ease;
 
+  &::placeholder {
+    font-family: Mark, sans-serif;
+    font-size: 16px;
+    color: $text;
+  }
+
   &:focus {
     outline: none;
     border-bottom-color: $contrast;

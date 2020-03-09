@@ -26,6 +26,7 @@ body {
   font-family: Mark, sans-serif;
   min-height: 100vh;
   background: linear-gradient(149.28deg, #191536 0.67%, black 100%);
+  overflow-x: hidden;
 }
 
 .button {
@@ -85,6 +86,10 @@ body {
     padding: 0 30px;
   }
 
+  @include for-tablet-landscape-up {
+    padding: 0 50px;
+  }
+
   @include for-desktop-up {
     padding: 0 110px;
   }
@@ -100,6 +105,8 @@ body {
 
 .content-block {
   padding: 50px 0;
+  max-width: 1400px;
+  margin: 0 auto;
 
   @include for-tablet-portrait-up {
     padding: 70px 0;
@@ -127,7 +134,6 @@ body {
     font-size: 18px;
     padding: 8px;
     position: relative;
-    font-weight: 700;
 
     &::before {
       content: "";
@@ -218,11 +224,25 @@ body {
     width: 100%;
   }
 
-  @include for-tablet-landscape-up {
+  @include for-tablet-portrait-up {
     position: absolute;
-    top: 0;
+    top: 50%;
+    left: 76%;
+    width: 60%;
+    height: auto;
+    max-height: 380px;
+    max-width: 380px;
+    transform: translate(-50%, -50%);
+  }
+
+  @include for-tablet-landscape-up {
+    max-width: unset;
+    max-height: unset;
+    top: 20%;
     right: 0;
+    left: auto;
     width: 80%;
+    height: auto;
     transform: translateX(30px);
   }
 

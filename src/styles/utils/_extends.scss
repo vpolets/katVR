@@ -15,7 +15,7 @@
   font-size: 26px;
   line-height: 130%;
 
-  @include for-desktop-up {
+  @include for-tablet-landscape-up {
     font-size: 46px;
   }
 }
@@ -24,7 +24,7 @@
   @extend %headers;
   font-size: 21px;
 
-  @include for-desktop-up {
+  @include for-tablet-landscape-up {
     font-size: 36px;
   }
 }

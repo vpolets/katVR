@@ -2,13 +2,23 @@
 @import "utils/extends";
 
 .header {
-  padding: 18px 0;
+  padding: 18px 20px;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  max-width: 1400px;
+  margin: 0 auto;
+
+  @include for-tablet-portrait-up {
+    padding: 18px 30px;
+  }
 
   @include for-tablet-landscape-up {
-    padding: 64px 0;
+    padding: 64px 50px;
+  }
+
+  @include for-desktop-up {
+    padding: 64px 110px;
   }
 }
 
@@ -29,10 +39,12 @@
   display: block;
   transform: translateY(-100%);
   position: absolute;
+  box-sizing: border-box;
   width: 100%;
   padding: 32px;
   background-color: $purple;
   top: 0;
+  left: 0;
   opacity: 0;
   z-index: 2;
 

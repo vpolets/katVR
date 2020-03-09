@@ -3,9 +3,10 @@
   height: 100px;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: 60px;
+  margin: 0 auto 60px;
   position: relative;
   z-index: 1;
+  max-width: 1400px;
 
   &__contacts {
     display: none;
@@ -33,7 +34,7 @@
   @include for-phone-only {
     flex-direction: column;
     padding: 45px 0 50px;
-    height: 184px;
+    height: 190px;
     justify-content: stretch;
     align-items: flex-start;
     flex-wrap: wrap;

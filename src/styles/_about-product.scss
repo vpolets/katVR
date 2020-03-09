@@ -5,9 +5,16 @@
   flex-direction: column;
 
   &__inner {
+    width: 330px;
+    text-align: left;
+    @include for-tablet-portrait-up {
+      text-align: center;
+      margin: 0 auto;
+    }
     @include for-tablet-landscape-up {
       padding-right: 48px;
       margin-left: 50px;
+      text-align: left;
     }
     @include for-desktop-up {
       margin-left: 100px;
@@ -16,6 +23,15 @@
 
   &__header {
     margin: 0 0 32px;
+    text-align: left;
+
+    @include for-tablet-portrait-up {
+      text-align: center;
+    }
+
+    @include for-tablet-landscape-up {
+      text-align: left;
+    }
   }
 
   &__description {
