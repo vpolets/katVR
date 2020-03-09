@@ -87,11 +87,11 @@
 
   &:not(:placeholder-shown) + .form__label,
   &:focus + .form__label {
-    transform: translateY(-20px);
+    transform: translateY(-24px);
     color: $contrast;
 
     @include for-tablet-landscape-up {
-      transform: translateY(-30px);
+      transform: translateY(-32px);
     }
   }
 }
