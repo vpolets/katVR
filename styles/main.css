@@ -913,14 +913,14 @@ a {
     opacity: 1; }
   .form__input:not(:placeholder-shown) + .form__label,
   .form__input:focus + .form__label {
-    -webkit-transform: translateY(-20px);
-            transform: translateY(-20px);
+    -webkit-transform: translateY(-24px);
+            transform: translateY(-24px);
     color: #05c2df; }
     @media (min-width: 900px) {
       .form__input:not(:placeholder-shown) + .form__label,
       .form__input:focus + .form__label {
-        -webkit-transform: translateY(-30px);
-                transform: translateY(-30px); } }
+        -webkit-transform: translateY(-32px);
+                transform: translateY(-32px); } }
 
 .form__textarea {
   height: 120px;
