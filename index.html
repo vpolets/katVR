@@ -24,53 +24,51 @@
     <link rel="stylesheet" href="./styles/main.css">
   </head>
   <body>
-    <div class="layout-block">
-      <header class="header">
-        <a href="/">
-          <img src="./images/katVR_logo.svg" alt="Kat VR">
-        </a>
-        <nav class="nav header__nav">
-          <ul class="nav__list">
-            <li class="nav__item">
-              <a href="#about" class="nav__link header__link">About</a>
-            </li>
-            <li class="nav__item">
-              <a href="#kat-tech" class="nav__link header__link">Tech</a>
-            </li>
-            <li class="nav__item">
-              <a href="#why-kat" class="nav__link header__link">Benefits</a>
-            </li>
-            <li class="nav__item">
-              <a href="#get-in-touch" class="nav__link header__link">Contact</a>
-            </li>
-            <li class="nav__item">
-              <a href="#" class="header__button button">Buy now</a>
-            </li>
-          </ul>
-        </nav>
-        <button class="header__burger-button burger-button">
-          <span class="burger-button__el burger-button__el--top"></span>
-          <span class="burger-button__el burger-button__el--middle"></span>
-          <span class="burger-button__el burger-button__el--bottom"></span>
-        </button>
-        <nav class="nav header__nav header__nav--burger">
-          <ul class="nav__list">
-            <li class="nav__item">
-              <a href="#about" class="nav__link header__link">About</a>
-            </li>
-            <li class="nav__item">
-              <a href="#kat-tech" class="nav__link header__link">Tech</a>
-            </li>
-            <li class="nav__item">
-              <a href="#why-kat" class="nav__link header__link">Benefits</a>
-            </li>
-            <li class="nav__item">
-              <a href="#get-in-touch" class="nav__link header__link">Contact</a>
-            </li>
-          </ul>
-        </nav>
-      </header>
-    </div>
+    <header class="header">
+      <a href="/">
+        <img src="./images/katVR_logo.svg" alt="Kat VR">
+      </a>
+      <nav class="nav header__nav">
+        <ul class="nav__list">
+          <li class="nav__item">
+            <a href="#about" class="nav__link header__link">About</a>
+          </li>
+          <li class="nav__item">
+            <a href="#kat-tech" class="nav__link header__link">Tech</a>
+          </li>
+          <li class="nav__item">
+            <a href="#why-kat" class="nav__link header__link">Benefits</a>
+          </li>
+          <li class="nav__item">
+            <a href="#get-in-touch" class="nav__link header__link">Contact</a>
+          </li>
+          <li class="nav__item">
+            <a href="#" class="header__button button">Buy now</a>
+          </li>
+        </ul>
+      </nav>
+      <button class="header__burger-button burger-button">
+        <span class="burger-button__el burger-button__el--top"></span>
+        <span class="burger-button__el burger-button__el--middle"></span>
+        <span class="burger-button__el burger-button__el--bottom"></span>
+      </button>
+      <nav class="nav header__nav header__nav--burger">
+        <ul class="nav__list">
+          <li class="nav__item">
+            <a href="#about" class="nav__link header__link">About</a>
+          </li>
+          <li class="nav__item">
+            <a href="#kat-tech" class="nav__link header__link">Tech</a>
+          </li>
+          <li class="nav__item">
+            <a href="#why-kat" class="nav__link header__link">Benefits</a>
+          </li>
+          <li class="nav__item">
+            <a href="#get-in-touch" class="nav__link header__link">Contact</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
     <main>
       <div class="fixed-area">
         <a href="#" class="button fixed-area__buy-now">Buy now</a>
@@ -79,7 +77,8 @@
         <section class="header-cover">
           <div class="header-cover__info">
             <picture>
-              <source media="(max-width: 900px)" srcset="./images/katVR_mobile.png">
+              <source media="(max-width: 600px)" srcset="./images/katVR_mobile.png">
+              <source media="(max-width: 900px)" srcset="./images/katVR__tablet.png">
               <source srcset="./images/katVR_lg.png">
               <img src="./images/education.svg" alt="katVR sensors" class="image">
             </picture>
@@ -87,7 +86,7 @@
             <section class="header-cover__description-wrapper">
               <p class="header-cover__description">Discover the most comprehensive VR Locomotion system, and unlock infinite motion in any games on any platforms!</p>
               <p class="header-cover__price">1200$</p>
-              <button class="play-button header-cover__play-button">
+              <button class="play-button">
                 <span class="play"></span>
                 <span class="text">Play Video</span>
               </button>
@@ -142,7 +141,7 @@
           <article class="about-product">
             <img src="./images/about-product.png"  alt="about katVR" class="about-product__img">
             <div class="about-product__inner">
-              <h2 class="text-left about-product__header">About <span class="quantum">product</span></h2>
+              <h2 class="about-product__header">About <span class="quantum">product</span></h2>
               <p class="about-product__description">KAT loco is a foot-based VR locomotion system that gives complete physical control over lower-body actions, allowing you to freely walk, run, and carry out just any other movement in virtual reality.</p>
               <button class="play-button about-product__play-button">
                 <span class="play"></span>
