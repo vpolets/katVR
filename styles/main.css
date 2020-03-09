@@ -1409,7 +1409,7 @@ body {
     .image {
       max-width: unset;
       max-height: unset;
-      top: 20%;
+      top: 8%;
       right: 0;
       left: auto;
       width: 80%;
@@ -1418,7 +1418,7 @@ body {
               transform: translateX(30px); } }
   @media (min-width: 1280px) {
     .image {
-      top: 20%;
+      top: 0;
       -webkit-transform: translateX(100px);
               transform: translateX(100px); } }
 
