@@ -29,16 +29,37 @@ const intersectionObserver = new IntersectionObserver(
 
 intersectionObserver.observe(techSpecs);
 
-function loadImage() {
-  const img = new Image();
-  const x = document.getElementById('cover-img');
+const infoButtons = document.querySelectorAll('.kat-tech__button');
+const toggleActive = (e) => {
+  const { target } = e;
 
-  img.onload = function() {
-    x.src = img.src;
-    x.classList.toggle('is-active');
-  };
+  if (target.classList.contains('is-active')) {
+    target.classList.remove('is-active');
+  } else {
+    infoButtons.forEach(button => {
+      button.classList.remove('is-active');
+    });
+    target.classList.add('is-active');
+  }
+};
 
-  img.src = './images/katVR_lg.png' + '?_=' + (+new Date());
-}
+infoButtons.forEach(button => {
+  button.addEventListener('click', toggleActive, false);
+});
 
-loadImage();
+document.addEventListener('click', (e) => {
+  const { target } = e;
+
+  if (!target.classList.contains('kat-tech__button')) {
+    infoButtons.forEach(button => {
+      button.classList.remove('is-active');
+    });
+  }
+});
+
+// burger button
+const burger = document.querySelector('.header__burger-button');
+
+burger.addEventListener('click', () => {
+  burger.classList.toggle('is-active');
+});
